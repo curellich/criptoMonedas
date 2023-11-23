@@ -37,7 +37,7 @@ public class Investor implements CriptoCurrencyObserver {
             sumOfPercentages += movement.getPercentage();
         }
 
-        invest(sumOfPercentages > 0, currency);
+        invest(sumOfPercentages >= 0, currency);
 
 
     }
@@ -80,6 +80,10 @@ public class Investor implements CriptoCurrencyObserver {
         }else{
             this.strategyInvest.downInvest(this, criptoCurrency);
         }
+    }
+
+    public void changeStrategy(StrategyInvest strategyInvest){
+        this.strategyInvest = strategyInvest;
     }
 
 

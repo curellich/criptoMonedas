@@ -33,11 +33,15 @@ public class Main {
 
         etherium.generateMovement(0.1);
         etherium.generateMovement(-(0.2));
+
+
+        cristian.changeStrategy(new RiskStrategy());
+
         ada.generateMovement(0.3);
         ada.generateMovement(-(0.4));
         ada.generateMovement(0.5);
         etherium.generateMovement(0.6);
-        bitcoin.generateMovement(0.7);
+        bitcoin.generateMovement(-0.7);
 
 
 
